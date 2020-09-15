@@ -1,0 +1,114 @@
+﻿@model MagTech.Models.BazaArtykulow
+
+@{
+    ViewData["Title"] = "Edit";
+}
+    <div class="container">
+        <h4>Edycja informacji dodatkowych artykuł</h4>
+        <hr />
+        <form asp-action="Edit">
+            <div class="row">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+                <div class="col">
+                    <fieldset>
+                        <label class="text-primary" for="readOnlyInput">Numer artykułu:</label>
+                        <input asp-for="NumerArtykulu" class="form-control-plaintext" id="readOnlyInput" type="text" readonly="">
+                    </fieldset>
+                </div>
+                <div class="col">
+                    <fieldset>
+                        <label class="text-primary" for="readOnlyInput">Grupa materiałowa</label>
+                        <input asp-for="GrupaMaterialowa" class="form-control-plaintext" id="readOnlyInput" type="text" readonly="">
+                    </fieldset>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col">
+                        <fieldset>
+                            <label class="text-primary" for="readOnlyInput">Opis</label>
+                            <input asp-for="NazwaArtykulu" class="form-control-plaintext" id="readOnlyInput" type="text" readonly="">
+                        </fieldset>
+                    </div>
+                </div>            
+            <div class="row">
+                <div class="col">
+                    <fieldset>
+                        <label class="text-primary" for="readOnlyInput">Regał</label>
+                        <input asp-for="NumerRegalu" class="form-control-plaintext" id="readOnlyInput" type="text" readonly="">
+                    </fieldset>
+                </div>
+                <div class="col">
+                    <fieldset>
+                        <label class="text-primary" for="readOnlyInput">Półka</label>
+                        <input asp-for="NumerPolki" class="form-control-plaintext" id="readOnlyInput" type="text" readonly="">
+                    </fieldset>
+                </div>
+                <div class="col">
+                    <fieldset>
+                        <label class="text-primary" for="readOnlyInput">Przedział</label>
+                        <input asp-for="NumerPrzedzialu" class="form-control-plaintext" id="readOnlyInput" type="text" readonly="">
+                    </fieldset>
+                </div>
+                <div class="col">
+                    <fieldset>
+                        <label class="text-primary" for="readOnlyInput">Szereg</label>
+                        <input asp-for="NumerSzeregu" class="form-control-plaintext" id="readOnlyInput" type="text" readonly="">
+                    </fieldset>
+                </div>             
+            </div>
+            <div class="row">
+                <div class="col">
+                    <fieldset>
+                        <label class="text-primary" for="readOnlyInput">Wielkość pojemnika</label>
+                        <input asp-for="WielkoscPojemnika" class="form-control-plaintext" id="readOnlyInput" type="text" readonly="">
+                    </fieldset>
+                </div>
+                <div class="col">
+                    <fieldset>
+                        <label class="text-primary" for="readOnlyInput">Tag</label>
+                        <input asp-for="Tag" class="form-control-plaintext" id="readOnlyInput" type="text" readonly="">
+                    </fieldset>
+                </div>
+                <div class="col">
+                    <fieldset>
+                        <label class="text-primary" for="readOnlyInput">Typ</label>
+                        <input asp-for="Typ" class="form-control-plaintext" id="readOnlyInput" type="text" readonly="">
+                    </fieldset>
+                </div>
+                <div class="col">
+                    <fieldset>
+                        <label class="text-primary" for="readOnlyInput">Oznaczenie Fifo</label>
+                        <input asp-for="OznaczenieFifo" class="form-control-plaintext" id="readOnlyInput" type="text" readonly="">
+                    </fieldset>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <fieldset>
+                        <label class="text-primary" for="readOnlyInput">Stan w miejscu składowania</label>
+                        <input asp-for="StanWMiejscuSkladowania" class="form-control-plaintext" id="readOnlyInput" type="text" readonly="">
+                    </fieldset>
+                </div>
+                <div class="col">
+                    <fieldset>
+                        <label class="text-primary" for="readOnlyInput">Stan minimalny</label>
+                        <input asp-for="StanMinimalny" class="form-control-plaintext" id="readOnlyInput" type="text" readonly="">
+                    </fieldset>
+                </div>
+            </div>  
+                <div class="form-group">
+                    <label class="text-warning">Dodatkowe informacje:</label>
+                    <textarea asp-for="DodatkoweInformacje" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="DodatkoweInformacje" class="text-danger"></span>
+
+                </div>
+                <partial name="_EditAndBackToTheList" model="Model.Id" />
+        </form>
+    </div>
+
+
+
+
+
